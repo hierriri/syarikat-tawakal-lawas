@@ -1,0 +1,288 @@
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    background: #111827;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 50px;
+}
+
+.hero-container {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #2563eb;
+}
+
+.hero-text h1 {
+    font-size: 45px;
+    color: #111827;
+}
+
+.hero-text span {
+    color: #2563eb;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #2563eb;
+    color: white;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   SECTION DESIGN
+========================= */
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #111827;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: white;
+}
+
+.about p {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* =========================
+   TIMELINE EXPERIENCE
+========================= */
+
+.timeline {
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline-item {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.timeline-item h3 {
+    color: #2563eb;
+}
+
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.project-card:hover {
+    transform:translateY(-5px);
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill {
+    background:#2563eb;
+    color:white;
+    padding:10px 20px;
+    border-radius:25px;
+}
+
+
+/* =========================
+   CERTIFICATION
+========================= */
+
+.card {
+    background:white;
+    padding:25px;
+    margin:20px auto;
+    max-width:800px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    text-align:center;
+}
+
+.contact a {
+    color:#2563eb;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .hero-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:35px;
+    }
+
+
+    .nav-links{
+        display:none;
+    }
+
+
+    section{
+        padding:60px 5%;
+    }
+
+}
