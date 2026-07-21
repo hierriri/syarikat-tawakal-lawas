@@ -1,50 +1,48 @@
-/* ================================
-   GLOBAL SETTINGS
-================================ */
-
+/* =====================================
+   GLOBAL
+===================================== */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
-
-
-body {
-
-    font-family: "Segoe UI", Arial, sans-serif;
-
-    line-height: 1.7;
-
-    color: #2b2118;
-
-    background: #fff8ed;
-
-}
-
-
-
-
-
-/* ================================
-   COLORS
-================================ */
 
 
 :root {
 
-    --dark: #17120d;
+    --dark:#17120d;
+    --dark2:#241a12;
 
-    --gold: #c89b3c;
+    --gold:#c99a3b;
+    --gold-light:#f1d58a;
 
-    --gold-light: #e8c875;
+    --cream:#fff5df;
+    --cream-dark:#f3dfb8;
 
-    --cream: #fff3d6;
+    --brown:#5a351e;
 
-    --white: #ffffff;
+    --white:#ffffff;
 
-    --brown: #5b3924;
+    --text:#33261c;
+
+}
+
+
+
+body {
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    line-height:1.7;
 
 }
 
@@ -52,20 +50,20 @@ body {
 
 
 
-/* ================================
+/* =====================================
    NAVIGATION
-================================ */
+===================================== */
 
 
 header {
 
-    background: var(--dark);
+    position:sticky;
 
-    position: sticky;
+    top:0;
 
-    top: 0;
+    z-index:999;
 
-    z-index: 1000;
+    background:var(--dark);
 
 }
 
@@ -73,17 +71,17 @@ header {
 
 nav {
 
-    max-width: 1200px;
+    max-width:1200px;
 
-    margin: auto;
+    margin:auto;
 
-    padding: 18px 40px;
+    padding:18px 40px;
 
-    display: flex;
+    display:flex;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
-    align-items: center;
+    align-items:center;
 
 }
 
@@ -91,17 +89,17 @@ nav {
 
 .logo {
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    gap: 15px;
+    gap:15px;
 
-    color: var(--gold-light);
+    color:var(--gold-light);
 
-    font-weight: bold;
+    font-weight:700;
 
-    letter-spacing: 1px;
+    letter-spacing:1px;
 
 }
 
@@ -109,11 +107,11 @@ nav {
 
 .logo img {
 
-    width: 55px;
+    width:55px;
 
-    height: 55px;
+    height:55px;
 
-    object-fit: contain;
+    object-fit:contain;
 
 }
 
@@ -121,11 +119,11 @@ nav {
 
 nav ul {
 
-    display: flex;
+    display:flex;
 
-    list-style: none;
+    list-style:none;
 
-    gap: 25px;
+    gap:25px;
 
 }
 
@@ -133,13 +131,11 @@ nav ul {
 
 nav a {
 
-    color: white;
+    text-decoration:none;
 
-    text-decoration: none;
+    color:white;
 
-    font-size: 15px;
-
-    transition: .3s;
+    transition:.3s;
 
 }
 
@@ -147,7 +143,7 @@ nav a {
 
 nav a:hover {
 
-    color: var(--gold-light);
+    color:var(--gold-light);
 
 }
 
@@ -156,38 +152,40 @@ nav a:hover {
 
 
 
-/* ================================
+
+/* =====================================
    HERO
-================================ */
+===================================== */
 
 
 .hero {
 
-    min-height: 90vh;
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
 
     background:
 
     linear-gradient(
-    rgba(23,18,13,.88),
-    rgba(23,18,13,.88)
+    rgba(20,15,10,.85),
+    rgba(20,15,10,.85)
     ),
 
     url("images/fatiyah1.jpg");
 
-    background-size: cover;
 
-    background-position: center;
+    background-size:cover;
 
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    color:white;
+    background-position:center;
 
 }
 
@@ -195,9 +193,9 @@ nav a:hover {
 
 .hero-content {
 
-    max-width: 850px;
+    max-width:850px;
 
-    padding: 40px;
+    padding:40px;
 
 }
 
@@ -205,9 +203,9 @@ nav a:hover {
 
 .hero-logo {
 
-    width: 160px;
+    width:170px;
 
-    margin-bottom: 25px;
+    margin-bottom:25px;
 
 }
 
@@ -215,11 +213,11 @@ nav a:hover {
 
 .hero h1 {
 
-    font-size: 48px;
+    font-size:48px;
 
-    color: var(--gold-light);
+    text-transform:uppercase;
 
-    text-transform: uppercase;
+    color:var(--gold-light);
 
 }
 
@@ -227,9 +225,7 @@ nav a:hover {
 
 .hero h2 {
 
-    margin: 10px;
-
-    font-size: 28px;
+    font-size:28px;
 
 }
 
@@ -237,19 +233,17 @@ nav a:hover {
 
 .hero-tagline {
 
-    font-size: 20px;
+    font-size:20px;
 
-    margin: 25px 0;
+    margin:25px 0;
 
 }
 
 
 
-
-
 .hero-buttons {
 
-    margin-top: 35px;
+    margin-top:35px;
 
 }
 
@@ -259,17 +253,17 @@ nav a:hover {
 .btn-secondary {
 
 
-    display: inline-block;
+    display:inline-block;
 
-    padding: 12px 30px;
+    padding:12px 30px;
 
-    margin: 10px;
+    margin:10px;
 
-    border-radius: 30px;
+    border-radius:30px;
 
-    text-decoration: none;
+    text-decoration:none;
 
-    transition: .3s;
+    transition:.3s;
 
 }
 
@@ -277,7 +271,7 @@ nav a:hover {
 
 .btn-primary {
 
-    background: var(--gold);
+    background:var(--gold);
 
     color:white;
 
@@ -298,7 +292,7 @@ nav a:hover {
 .btn-primary:hover,
 .btn-secondary:hover {
 
-    transform: translateY(-4px);
+    transform:translateY(-5px);
 
 }
 
@@ -308,14 +302,14 @@ nav a:hover {
 
 
 
-/* ================================
-   GENERAL SECTION
-================================ */
+/* =====================================
+   SECTION
+===================================== */
 
 
 section {
 
-    padding: 80px 10%;
+    padding:80px 10%;
 
 }
 
@@ -325,7 +319,7 @@ section {
 
     text-align:center;
 
-    margin-bottom:50px;
+    margin-bottom:45px;
 
 }
 
@@ -333,7 +327,7 @@ section {
 
 .section-title h2 {
 
-    font-size:35px;
+    font-size:36px;
 
     color:var(--brown);
 
@@ -351,9 +345,12 @@ section {
 
 
 
-/* ================================
+
+
+
+/* =====================================
    ABOUT
-================================ */
+===================================== */
 
 
 .about-content {
@@ -374,12 +371,13 @@ section {
 
 
 
-/* ================================
+/* =====================================
    HIGHLIGHTS
-================================ */
+===================================== */
 
 
 .highlights {
+
 
     background:var(--dark);
 
@@ -395,11 +393,19 @@ section {
 
 
 
+.highlight-box {
+
+    padding:30px;
+
+}
+
+
+
 .highlight-box h3 {
 
-    color:var(--gold-light);
-
     font-size:45px;
+
+    color:var(--gold-light);
 
 }
 
@@ -409,10 +415,9 @@ section {
 
 
 
-
-/* ================================
+/* =====================================
    BRAND
-================================ */
+===================================== */
 
 
 .brand-grid {
@@ -437,19 +442,8 @@ section {
 
     border-radius:20px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
-
-}
-
-
-
-.brand-card img {
-
-    width:100%;
-
-    border-radius:15px;
-
-    margin-bottom:20px;
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
 
 }
 
@@ -459,13 +453,23 @@ section {
 
     color:var(--brown);
 
-    margin-bottom:15px;
+    font-size:25px;
 
 }
 
 
 
-.brand-card li {
+.brand-card h4 {
+
+    margin-top:20px;
+
+    color:var(--gold);
+
+}
+
+
+
+.brand-card ul {
 
     margin-left:20px;
 
@@ -476,10 +480,46 @@ section {
 
 
 
+/* FATIYAH IMAGE */
 
-/* ================================
+.fatiyah-gallery {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.fatiyah-gallery img {
+
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
    SERVICES
-================================ */
+===================================== */
 
 
 .service-grid {
@@ -498,7 +538,7 @@ section {
 .service-card {
 
 
-    background:var(--cream);
+    background:white;
 
     padding:25px;
 
@@ -514,7 +554,11 @@ section {
 
 .service-card:hover {
 
+
     transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.15);
 
 }
 
@@ -532,14 +576,14 @@ section {
 
 
 
-/* ================================
+/* =====================================
    WHY US
-================================ */
+===================================== */
 
 
 .why-us {
 
-    background:#f6e7c8;
+    background:var(--cream-dark);
 
 }
 
@@ -565,7 +609,7 @@ section {
 
     padding:25px;
 
-    border-radius:15px;
+    border-radius:18px;
 
 }
 
@@ -574,16 +618,17 @@ section {
 
 
 
-/* ================================
+
+/* =====================================
    CAREER
-================================ */
+===================================== */
 
 
 #career ul {
 
     max-width:500px;
 
-    margin:25px auto;
+    margin:20px auto;
 
 }
 
@@ -599,9 +644,11 @@ section {
 
 
 
-/* ================================
+
+
+/* =====================================
    GALLERY
-================================ */
+===================================== */
 
 
 .gallery-box {
@@ -619,6 +666,7 @@ section {
 
 .gallery-box img {
 
+
     width:100%;
 
     border-radius:20px;
@@ -630,9 +678,11 @@ section {
 
 
 
-/* ================================
+
+
+/* =====================================
    CONTACT
-================================ */
+===================================== */
 
 
 .contact-container {
@@ -657,7 +707,8 @@ section {
 
     border-radius:20px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.1);
 
 }
 
@@ -673,7 +724,7 @@ section {
 
 .contact-card a {
 
-    color:green;
+    color:#138a36;
 
     text-decoration:none;
 
@@ -685,9 +736,10 @@ section {
 
 
 
-/* ================================
+
+/* =====================================
    FOOTER
-================================ */
+===================================== */
 
 
 footer {
@@ -717,10 +769,9 @@ footer h2 {
 
 
 
-
-/* ================================
-   MOBILE RESPONSIVE
-================================ */
+/* =====================================
+   MOBILE
+===================================== */
 
 
 @media(max-width:900px){
@@ -733,13 +784,15 @@ nav {
 }
 
 
+
 nav ul {
+
+
+    margin-top:20px;
 
     flex-wrap:wrap;
 
     justify-content:center;
-
-    margin-top:20px;
 
 }
 
@@ -747,7 +800,7 @@ nav ul {
 
 .hero h1 {
 
-    font-size:35px;
+    font-size:34px;
 
 }
 
@@ -760,6 +813,14 @@ nav ul {
 .contact-container,
 .gallery-box {
 
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.fatiyah-gallery {
 
     grid-template-columns:1fr;
 
